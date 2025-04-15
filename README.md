@@ -69,38 +69,141 @@ The simulation:
 
 ### Sample Output
 ```bash
+Running Frauchiger-Renner Paradox Simulation...
+(This demonstrates the necessity of contextual certainty in quantum mechanics)
+
+
 ========== DYNAMIC FRAUCHIGER-RENNER PARADOX SIMULATION ==========
+
 This simulation demonstrates how agents reach contradictory conclusions
 when applying quantum theory from different perspectives.
+
+Initial state prepared. The system is in |+⟩ state.
+
 ----- Alice's Perspective -----
 Analysis: Quantum mechanics predicts Alice (qubit 1) observes:
-Outcome '0' with probability: 0.5000
-Outcome '1' with probability: 0.5000
+  Outcome '0' with probability: 0.5000
+  Outcome '1' with probability: 0.5000
+
 *** For demonstrating the paradox's logic, we proceed CONDITIONALLY on Alice observing '1' ***
+*** This is a valid path that quantum mechanics predicts occurs with probability 0.5000 ***
+
+Alice (conditionally) observes outcome: 1
+Alice (conditionally) concludes: System is in state |1⟩
+
+Communication channel established between labs.
+
 ----- Charlie's Perspective -----
 Analysis: Quantum mechanics predicts Charlie (qubit 2) observes:
-Outcome '0' with probability: 0.5000
-Outcome '1' with probability: 0.5000
+  Outcome '0' with probability: 0.5000
+  Outcome '1' with probability: 0.5000
+
+*** For demonstrating the paradox's logic, we proceed CONDITIONALLY on Charlie observing '1' ***
+*** This is a valid path that quantum mechanics predicts occurs with probability 0.5000 ***
+
+Charlie (conditionally) observes outcome: 1
+Charlie infers (conditionally): Alice must have measured 1
 Charlie concludes (conditionally): System must be in state |1⟩
+
 ----- Bob's Perspective -----
 Bob's Bell measurement probabilities (based on analysis of the quantum state):
-|Φ+⟩: 1.0000
-|Φ-⟩: 0.0000
-|Ψ+⟩: 0.0000
-|Ψ-⟩: 0.0000
+  |Φ+⟩: 1.0000
+  |Φ-⟩: 0.0000
+  |Ψ+⟩: 0.0000
+  |Ψ-⟩: 0.0000
+
+Quantum mechanics predicts Bob most likely observes Bell state |Φ+⟩ with probability 1.0000
+
+*** Analyzing the consequences if Bob observes Bell state |Φ+⟩ ***
+
+Bob concludes (from quantum analysis): Alice CANNOT have a definite measurement outcome.
 Bob concludes (from quantum analysis): System CANNOT be in a definite state |0⟩ or |1⟩.
+This is because |Φ+⟩ represents an entangled superposition (|00⟩ + |11⟩)/√2 of Alice+System.
+
+----- Debbie's Perspective -----
+Debbie's Bell measurement probabilities (based on analysis of the quantum state):
+  |Φ+⟩: 1.0000
+  |Φ-⟩: 0.0000
+  |Ψ+⟩: 0.0000
+  |Ψ-⟩: 0.0000
+
+Quantum mechanics predicts Debbie most likely observes Bell state |Φ+⟩ with probability 1.0000
+
+*** Analyzing the consequences if Debbie observes Bell state |Φ+⟩ ***
+
+Debbie concludes (from quantum analysis): Charlie CANNOT have a definite measurement outcome.
+This is because |Φ+⟩ represents an entangled superposition (|00⟩ + |11⟩)/√2 of Charlie+Communication qubits.
+
 ===== CHECKING FOR CONTRADICTIONS (Conditional Path Analysis) =====
+Bob's inference about Alice vs. Alice's conditional observation ('1'): Consistent = True
 Charlie's conditional conclusion vs Bob's conclusion about System: Consistent = False
--> Charlie (conditionally) concluded: System is in definite state |1⟩
--> Bob concluded (from analysis): System CANNOT be in a definite state.
--> PARADOXICAL ELEMENT: These cannot both be true if system states are universal facts!
+  -> Charlie (conditionally) concluded: System is in definite state |1⟩
+  -> Bob concluded (from analysis): System CANNOT be in a definite state.
+  -> PARADOXICAL ELEMENT: These cannot both be true if system states are universal facts!
+Debbie's inference about Charlie vs. Charlie's conditional observation ('1'): Consistent = True
+
+===== THE FRAUCHIGER-RENNER PARADOX EMERGES =====
+The paradox occurs when we try to combine all perspectives into a single framework.
+We demonstrated this by following a specific conditional path where:
+1. Alice (conditionally) measures '1', leading her to conclude the system is in state |1⟩
+2. Charlie (conditionally) measures '1', confirming Alice's measurement
+3. Bob measures the Bell state |Φ+⟩, which implies Alice CANNOT have a definite result
+4. Debbie measures the Bell state |Φ+⟩, which implies Charlie CANNOT have a definite result
+
+These perspectives CANNOT be reconciled if we assume facts about measurement outcomes
+are universal and observer-independent. This creates a direct logical contradiction.
+
+IMPORTANT: We didn't need to 'collapse' the quantum state to show this paradox.
+Instead, we analyzed what quantum mechanics itself predicts about the probabilities
+and the logical consequences that follow if certain outcomes occur.
+
 ===== CONTEXTUAL CERTAINTY RESOLUTION =====
 Contextual Certainty resolves the paradox by recognizing:
+- Alice's certainty about the system is only valid in Alice's context
+- Bob's certainty about Alice+system is only valid in Bob's context
+- Charlie's certainty about his measurement is only valid in Charlie's context
+- Debbie's certainty about Charlie+comm is only valid in Debbie's context
 
-Alice's certainty about the system is only valid in Alice's context
-Bob's certainty about Alice+system is only valid in Bob's context
-Charlie's certainty about his measurement is only valid in Charlie's context
-Debbie's certainty about Charlie+comm is only valid in Debbie's context
+These agents' observations are internally consistent when interpreted
+as context-dependent facts rather than universal, observer-independent facts.
+Quantum theory correctly predicts all observations, but their interpretation requires
+abandoning the assumption that measurement outcomes are universal facts.
+
+===== AGENT STATES (Conditional Path Analysis) =====
+Agent: Alice
+  Observations:
+    direct: 1
+  Inferences:
+    About System:
+      state: |1⟩ (confidence: 1.00)
+
+Agent: Bob
+  Observations:
+    bell: Φ+
+  Inferences:
+    About Alice:
+      definite_outcome: False (confidence: 0.99)
+    About System:
+      definite_state: False (confidence: 0.99)
+
+Agent: Charlie
+  Observations:
+    direct: 1
+  Inferences:
+    About Alice:
+      direct: 1 (confidence: 1.00)
+    About System:
+      state: |1⟩ (confidence: 1.00)
+
+Agent: Debbie
+  Observations:
+    bell: Φ+
+  Inferences:
+    About Charlie:
+      definite_outcome: False (confidence: 0.99)
+
+
+Simulation completed successfully!
 ```
 
 ## Broader Implications
