@@ -1,0 +1,19 @@
+=== Baseline (all overlaps real) ===
+Leg                 χ       κ       γ (deg)
+────────────────────────────────────────────
+Friend unitary     0.058   0.056       0.00
+Wigner post-sel    0.981   0.188       0.00
+Consistency jump   1.792   0.217       0.00
+────────────────────────────────────────────
+χ_loop  = 2.831
+|z_loop| = 0.400  arg=0.00°
+
+=== After S-gate on S (non-zero γ) ===
+Leg                 χ       κ       γ (deg)
+────────────────────────────────────────────
+Friend unitary     1.386   0.750       0.00
+Wigner post-sel    0.708   0.754     -42.18
+Consistency jump   1.792   0.837     -54.74
+────────────────────────────────────────────
+χ_loop  = 3.886
+|z_loop| = 1.039  arg=-7.79°
