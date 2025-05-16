@@ -7,11 +7,26 @@
 
 ## Abstract
 
-We introduce the Contextual Certainty Transformation (CCT), a framework that quantifies how measurement certainty between different contexts changes as the observational setup (or "Heisenberg cut") evolves or moves. CCT addresses foundational issues like the Frauchiger–Renner (FR) paradox by replacing its strict consistency postulate with a set of observer-relative geometric invariants: a rapidity chi_AB = -ln(F_AB) (from Uhlmann fidelity F_AB between states A and B), a geometric phase gamma_ABO = arg(<A|B><B|O><O|A>) (Bargmann invariant), and a contextual misalignment scalar kappa_ABO = sqrt(det G(A,B,O)) (where G_ij = |<psi_i|psi_j>|^2).
+Modern quantum mechanics offers astonishing predictive power, but it remains unsettled on how to interpret measurement and the observer’s role—especially when the observer becomes part of the system. Paradoxes like *Frauchiger–Renner* (FR) and *Delayed Choice* suggest that the usual assumptions about consistency and objective outcomes may not hold when observational context changes. This work emerged from a cross-disciplinary effort—initially driven by curiosity and AI-assisted exploration—to develop a framework that could track and quantify such contextual shifts without altering standard quantum mechanics.
 
-For infinitesimal context shifts (of Fubini-Study length `epsilon`), `chi`, `gamma`, and `kappa` all scale quadratically (O(epsilon^2)). `gamma` is identified as the primary CCT curvature/holonomy measure (`|gamma_loop| ≈ Area/2`), while `kappa` quantifies the planarity defect relative to the observer's A-O frame. These invariants transform under a composition law that is generally non-Möbius, featuring a newly derived O(epsilon^4) curvature-squared correction term (`Delta_z = Delta_kappa + i*Delta_gamma_corr`) when spectral alignment between steps is broken.
+We introduce the **Contextual Certainty Transformation (CCT)**, a geometric framework that quantifies how measurement certainty changes as the observational setup (or "Heisenberg cut") evolves. CCT replaces FR's strict consistency postulate with a set of observer-relative geometric invariants:
+
+- **Rapidity**: `chi_AB = -ln(F_AB)` (from Uhlmann fidelity `F_AB` between states A and B)  
+- **Geometric Phase**: `gamma_ABO = arg(<A|B><B|O><O|A>)` (Bargmann invariant)  
+- **Contextual Misalignment**: `kappa_ABO = sqrt(det G(A,B,O))`, where `G_ij = |<psi_i|psi_j>|^2`
+
+For infinitesimal context shifts (of Fubini–Study length `epsilon`), `chi`, `gamma`, and `kappa` all scale quadratically (`O(epsilon^2)`). `gamma` is identified as the primary CCT curvature/holonomy measure (`|gamma_loop| ≈ Area/2`), while `kappa` quantifies the planarity defect relative to the observer's A–O frame.
+
+These invariants transform under a composition law that is generally non-Möbius, featuring a newly derived `O(epsilon^4)` curvature-squared correction term:
+
+```
+Delta_z = Delta_kappa + i*Delta_gamma_corr
+```
+
+when spectral alignment between steps is broken.
 
 We derive the exact SU(2) law, generalize to SU(4) via a quartic polynomial, and validate a highly accurate approximate SU(4) law. We demonstrate that CCT quantitatively resolves the FR paradox by showing its reasoning loop acquires non-zero holonomy (`gamma_loop`, `chi_loop`), eliminating the contradiction within standard quantum mechanics. CCT's `kappa` offers a novel, experimentally accessible scalar tracking the entanglement of an observer's contextual frame, providing a geometric perspective on decoherence and a non-retrocausal explanation for delayed-choice phenomena.
+
 
 ## 1. Introduction
 
