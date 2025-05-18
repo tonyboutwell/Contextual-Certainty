@@ -1,0 +1,74 @@
+======================================================================
+ CCT INVARIANT DEMONSTRATIONS (with Explanations)
+======================================================================
+
+--- Section 1: Rapidity chi_AB = -ln(|<A|B>|^2) ---
+
+  Explanation: Rapidity (chi) measures the 'information distance' or 'distinguishability' between two quantum states A and B. It's derived from their fidelity F_AB = |<A|B>|^2.
+
+Case 1.1: Identical states (A=B)
+  A = [1.000 0.000], B = [1.000 0.000]
+  Fidelity F_AB = 1.000
+  chi_AB = 0.000
+  Explanation: For identical states, fidelity is 1, so chi = -ln(1) = 0. There's no 'distance' between them.
+
+Case 1.2: Orthogonal states (A perpendicular to B)
+  A = [1.000 0.000], B = [0.000 1.000]
+  Fidelity F_AB = 0.000
+  chi_AB = inf
+  Explanation: For orthogonal states, fidelity is 0, so chi = -ln(0) = infinity. They are perfectly distinguishable.
+
+Case 1.3: Non-orthogonal, non-identical states
+  A = [1.000 0.000], B = [0.707 0.707]
+  Fidelity F_AB = 0.500
+  chi_AB = 0.693
+  Explanation: For states with partial overlap (here F_AB=0.5), chi is finite (ln(2) ≈ 0.693). This quantifies their intermediate distinguishability.
+
+
+--- Section 2: kappa_ABO and gamma_ABO ---
+
+  Explanation: Contextual Misalignment (kappa_ABO) measures the 'planarity defect' of the triad of states (A, B, O). It's derived from the Gram determinant of their pairwise fidelities. It's zero if the states are 'coplanar' in a generalized sense (e.g., two are identical, or one lies on the geodesic between the other two on the Bloch sphere, if O is one of them).
+  Geometric Phase (gamma_ABO) is the Bargmann invariant, capturing a phase accumulated when traversing the 'triangle' A-B-O-A. It reflects holonomy.
+
+Case 2.1: States A, B, O are 'close' (nearly collinear on Bloch sphere)
+  A = [1.000 0.000]
+  B = [0.995 0.100]
+  O = [0.980 0.197]
+  kappa_ABO = 0.00271
+  gamma_ABO = 0.000 rad = 0.00 deg
+  Explanation: When A, B, and O are very close (small perturbations), kappa is very small, indicating minimal misalignment or 'volume' of the triad. Gamma is also near zero as the 'area' of the triangle is small and states are real-valued.
+
+Case 2.2: A, B, O are somewhat 'collinear' on Bloch sphere but distinct
+  A = [1.000 0.000]
+  B = [0.707 0.707]
+  O = [0.000 1.000]
+  F_AB=0.500, F_AO=0.000, F_BO=0.500
+  kappa_ABO = 0.70711
+  gamma_ABO = 0.000 rad = 0.00 deg
+  Explanation: Here A=|0>, B=|+>, O=|1>. Since A and O are orthogonal (F_AO=0), the triangle has one 'zero-length' side in terms of fidelity between A and O. The kappa value is sqrt(0.5) approx 0.707. Gamma is zero because the term <O|A> in its definition is zero.
+
+Case 2.3: A, B, O are widely spread and 'non-planar' (e.g., axes of Bloch sphere)
+  A = [1.000 0.000]
+  B = [0.707 0.707]
+  O = [0.707 (0.000+0.707j)]
+  F_AB=0.500, F_AO=0.500, F_BO=0.500
+  kappa_ABO = 0.70711
+  gamma_ABO = 0.785 rad = 45.00 deg
+  Explanation: A=|0>, B=|+>, O=|+i> are like axes of the Bloch sphere. All pairwise fidelities are 0.5. This gives kappa = sqrt(0.5) approx 0.707. The non-zero gamma (45 deg) indicates a non-trivial geometric phase for this triad.
+
+Case 2.4: Degenerate case where two states are identical (e.g., B=O)
+  A = [1.000 0.000]
+  B = [0.707 0.707]
+  O = [0.707 0.707] (same as B)
+  kappa_ABO = 0.00000
+  gamma_ABO = 0.000 rad = 0.00 deg
+  Explanation: If two states in the triad are identical (here B=O), the 'triangle' degenerates, and kappa becomes 0. This signifies perfect 'planarity' or alignment in this context. Gamma is also zero.
+
+Case 2.5: Another distinct case to observe gamma
+  A = [0.707 0.707]
+  B = [0.000 1.000]
+  O = [0.707 (0.000+0.707j)]
+  F_AB=0.500, F_AO=0.500, F_BO=0.500
+  kappa_ABO = 0.70711
+  gamma_ABO = 0.785 rad = 45.00 deg
+  Explanation: For A=|+>, B=|1>, O=|+i>, we again find kappa = sqrt(0.5) and gamma = 45 deg. This demonstrates that different triads can have the same CCT invariant values if their geometric relationships are similar.
