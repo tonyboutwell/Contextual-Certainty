@@ -52,11 +52,18 @@ Given states `A`, `B` and observable `O` (all pure for simplicity here):
     *   `kappa_ABO = sqrt(det G(A,B,O))`, where `G_ij = |<i|j>|^2`. This quantifies the planarity defect.
     *   Scales as O(epsilon^2). Role: Geometric measure of misalignment relative to the A-O plane. (See Appendix A).
 
-## 3. Exact Single-Qubit Transformation (SU (2))
+## 3. Exact Single-Qubit Transformation (SU(2))
 
-For single-qubit transformations (where `kappa_ABO` might be effectively zero), the certainty `T` for outcome `O` given state `B` (transformed from `A` with fidelity `F` and initial certainty `P_A`) is:
-`T = 0.5 * [1 + (2F-1)*(2P_A-1) + 4*sqrt(max(0, F(1-F)P_A(1-P_A))) * cos(gamma_relative)]`
-where `gamma_relative` is the pertinent phase. Validated by Monte Carlo.
+For single-qubit transformations from a pure state |A⟩ to a pure state |B⟩ (a regime where the contextual misalignment `kappa_ABO` is typically zero or not the primary factor), the certainty `T` for observing the outcome associated with projector Π_O (having +1 eigenstate |O_eig⟩) when the system is in state |B⟩ is given by:
+
+`T = 0.5 * [1 + (2*F_AB - 1)*(2*P_A - 1) + 4*sqrt(max(0, F_AB*(1-F_AB)*P_A*(1-P_A))) * cos(gamma_relative)]`
+
+Where:
+*   `F_AB = |<A|B>|^2` is the fidelity between states |A⟩ and |B⟩.
+*   `P_A = |<O_eig|A>|^2` is the initial certainty for the outcome O when the system is in state |A⟩.
+*   `gamma_relative` is the **oriented (signed) dihedral angle** on the Bloch sphere. It is the angle between the plane defined by (Origin, r_A, r_O) and the plane defined by (Origin, r_A, r_B), where r_A, r_B, r_O are the Bloch vectors for states |A⟩, |B⟩, and |O_eig⟩ respectively. The sign of `gamma_relative` is determined by a consistent geometric convention (e.g., right-hand rule about r_A).
+
+This formula has been validated by direct comparison with quantum mechanical calculations across a comprehensive range of parameters and edge cases using the Python script `cct_su2_transformation_demo.py` and `cct_su2_law_demo.py`.
 
 ## 4. CCT Composition Law & SU(4) Transformation Law
 
