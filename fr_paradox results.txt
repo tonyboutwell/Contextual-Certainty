@@ -17,3 +17,35 @@ Consistency jump   1.792   0.837     -54.74
 ────────────────────────────────────────────
 χ_loop  = 3.886
 |z_loop| = 1.039  arg=-7.79°
+
+
+What These Results Mean: CCT in Action
+---------------------------------------
+This script demonstrates how Contextual Certainty Transformations (CCT) provide a novel resolution to the Frauchiger-Renner (FR) paradox from within standard quantum mechanics. The key idea is that shifting observational contexts (like different observers in the FR setup making inferences) isn't "free" – it has a quantifiable geometric signature.
+
+1. Baseline Run (All Overlaps Real):
+
+-- χ_loop = 2.831: This non-zero "rapidity loop" indicates that traversing the FR reasoning cycle (Friend's measurement → Wigner's measurement → inferring the initial state) accumulates a net "information distance" or change in distinguishability. The cycle isn't informationally neutral.
+-- |z_loop| = 0.400 (with arg = 0.00°): The z invariant combines contextual misalignment (κ) and geometric phase (γ). Here, z_loop is non-zero. Since all individual γ values are 0.00° (because the states are constructed with real numbers, making the Bargmann phase trivial), this non-zero z_loop comes purely from the κ (misalignment) contributions.
+-- Significance: Even without explicit quantum phases, CCT shows that the FR reasoning loop doesn't perfectly "close." The assumption of perfect consistency across the different steps is already challenged by a non-zero misalignment accumulated around the loop.
+
+2. S-Gate Variant Run (Non-Zero γ):
+
+-- Introducing Phases: Applying an S-gate (which adds a phase of i to the |1⟩ state) before the Friend's measurement makes the role of geometric phase explicit.
+-- Increased χ_loop = 3.886 and |z_loop| = 1.039: The "cost" of traversing the loop, in terms of both information distance and overall geometric defect, increases.
+-- Non-Zero γ values and arg(z_loop) = -7.79°:
+-- -- Individual legs of the reasoning loop now acquire non-zero Bargmann phases (γ).
+-- -- Crucially, the z_loop becomes a complex number with a non-zero argument. This is a direct signature of holonomy: the "observational frame" or context does not return to its original orientation after completing the reasoning cycle.
+-- Significance: This variant clearly demonstrates that the CCT framework captures geometric phase effects. The FR reasoning loop not only has a "length" (χ_loop) and "misalignment" (κ parts of z_loop) but also a "twist" (γ parts of z_loop).
+
+The Core Takeaway:
+---------------------
+In both scenarios, the non-zero χ_loop and z_loop are the critical results.
+
+The Frauchiger-Renner paradox arises from a contradiction derived by assuming that different observers' statements and measurement outcomes can be perfectly and consistently reconciled (the paper's "Assumption C").
+
+CCT resolves this by:
+-- Quantifying the cost of each step in the FR reasoning sequence (each "contextual shift") using χ, κ, and γ.
+-- Showing that the sum of these costs around the entire loop is non-zero.
+
+Because these loop invariants (χ_loop, z_loop) are non-zero, the FR reasoning sequence doesn't actually form a perfectly closed logical loop from the CCT geometric perspective. The assumed perfect consistency is shown to be violated by the underlying geometry of quantum information transfer between different contexts. Thus, the paradox is resolved without altering quantum mechanics itself, but by providing a more refined understanding of how information behaves across changing observational setups. 
