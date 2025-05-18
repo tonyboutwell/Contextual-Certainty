@@ -9,7 +9,7 @@
 
 Modern quantum mechanics offers astonishing predictive power, but it remains unsettled on how to interpret measurement and the observer’s role—especially when the observer becomes part of the system. Paradoxes like *Frauchiger–Renner* (FR) and *Delayed Choice* suggest that the usual assumptions about consistency and objective outcomes may not hold when observational context changes. This work emerged from a cross-disciplinary effort—initially driven by curiosity and AI-assisted exploration—to develop a framework that could track and quantify such contextual shifts without altering standard quantum mechanics.
 
-We introduce the **Contextual Certainty Transformation (CCT)**, a geometric framework that quantifies how measurement certainty changes as the observational setup (or "Heisenberg cut") evolves. CCT replaces FR's strict consistency postulate with a set of observer-relative geometric invariants:
+Our approach demonstrates that the 'cost' of shifting between observational contexts is not an arbitrary postulate but an emergent consequence of the underlying quantum geometry, quantifiable within the standard formalism. To this end, we introduce the **Contextual Certainty Transformation (CCT)**, a geometric framework that quantifies how measurement certainty changes as the observational setup (or "Heisenberg cut") evolves. CCT replaces FR's strict consistency postulate with a set of observer-relative geometric invariants:
 
 - **Rapidity**: `chi_AB = -ln(F_AB)` (from Uhlmann fidelity `F_AB` between states A and B)  
 - **Geometric Phase**: `gamma_ABO = arg(<A|B><B|O><O|A>)` (Bargmann invariant)  
