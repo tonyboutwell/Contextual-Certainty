@@ -91,7 +91,7 @@ The `KappaAdaptiveCCTPredictor` implements the following strategy:
     This correction is derived from a Ridge regression model trained on N-dimensional geometric features including `kappa_ABO`, SVD-derived properties, and Bargmann phase characteristics.
 This `kappa`-adaptive strategy achieves an overall R² ≈ 0.989 across SU(N) dimensions up to N=10.
 
-*(Details of the `KappaAdaptiveCCTPredictor` model, features, and performance are in Appendix C.2 and the supplementary code `KappaAdaptiveCCTPredictor.py`)*
+*(Details of the `KappaAdaptiveCCTPredictor` model and performance are in C.2)*
 
 ### 4.3 CCT Composition Law
 For sequential context shifts A -> B and B -> C, relative to a fixed observable O_eig:
@@ -146,8 +146,7 @@ CCT introduces a geometric calculus of quantum certainty using `chi_AB`, `gamma_
 *   **A. Epsilon-Scaling of Gram Determinants:** Proof that CCT `kappa_ABO` (from `G_ij = |<i|j>|^2`) scales as `O(epsilon^2)`.
 *   **B. Small-Triangle Holonomy (Bargmann Gamma-Area Law):** Proof that `|gamma_loop_bargmann| approx= Area/2`.
 *   **C. SU(N) Certainty Transformation Law Details**
-    *   **C.1 Original Quartic Polynomial Approach for SU(4) (Historical Context)**
-    *   **C.2 The `KappaAdaptiveCCTPredictor` for SU(N): SVD Projection, Weighting, Feature Engineering, and Learned Correction Model Performance.**
+    *   **C.2 Review the `KappaAdaptiveCCTPredictor` code and results for SU(N): SVD Projection, Weighting, Feature Engineering, and Learned Correction Model Performance.**
 *   **D. CCT Composition Law with `Delta_z` Correction:** Full derivation of `Delta_kappa_ACO = (epsilon^4 / 4) * [Im<u|v>]^2`.
 *   **E. Theoretical Basis for the `kappa_ABO ≈ 0.85` Critical Threshold.** (New Appendix)
 
