@@ -575,18 +575,11 @@ def main():
     results = predictor.comprehensive_validation()
     
     print(f"\n" + "="*80)
-    print("ULTIMATE CCT PREDICTOR READY")
+    print("CCT PREDICTOR READY")
     print("="*80)
     
     r2 = results['overall_r2']
-    
-    if r2 > 0.90:
-        print("🚀 Ready for experimental validation and publication!")
-        print("🎯 Quantum measurement theory breakthrough confirmed!")
-    else:
-        print("🔧 Optimization opportunities identified")
-        print("📈 Strong foundation for further development")
-    
+     
     print(f"\nKey capabilities:")
     print(f"- Automatic κ-based complexity detection")
     print(f"- Adaptive method selection for optimal accuracy") 
