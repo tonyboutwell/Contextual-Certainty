@@ -516,28 +516,28 @@ class KappaAdaptiveCCTPredictor:
             print(f"  {level:4s}: R² = {perf['r2']:6.4f}, MAE = {perf['mae']:.6f}, n = {perf['count']}")
         
         # Achievement assessment
-        print(f"\n4. BREAKTHROUGH ASSESSMENT")
+        print(f"\n4. ASSESSMENT")
         print("=" * 50)
         
         overall_r2 = evaluation_results['overall_r2']
         
         if overall_r2 > 0.95:
-            print("🏆 COMPLETE BREAKTHROUGH ACHIEVED!")
+            print("🏆 ACHIEVED!")
             print(f"   κ-adaptive predictor: R² = {overall_r2:.4f}")
             print("   SU(N) certainty transformations SOLVED!")
             
         elif overall_r2 > 0.90:
-            print("🎯 MAJOR BREAKTHROUGH!")
+            print("🎯 BETTER PROGRESS!")
             print(f"   κ-adaptive predictor: R² = {overall_r2:.4f}")
             print("   Excellent performance across all dimensions")
             
         elif overall_r2 > 0.80:
-            print("🔬 SUBSTANTIAL PROGRESS!")
+            print("🔬 OK PROGRESS!")
             print(f"   κ-adaptive predictor: R² = {overall_r2:.4f}")
             print("   Strong improvement over baseline methods")
             
         else:
-            print("📊 FOUNDATION ESTABLISHED")
+            print("📊 FOUNDATION Optimization Needed")
             print(f"   κ-adaptive predictor: R² = {overall_r2:.4f}")
             print("   Core framework validated, optimization needed")
         
