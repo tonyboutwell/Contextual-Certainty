@@ -15,9 +15,9 @@ Training κ-adaptive correction model...
 Generated 750 training samples
 Training correction model on 438 high-complexity samples
 Correction model performance:
-  Train R²: 0.9854
-  Test R²:  0.9826
-  Test MAE: 0.007025
+  Train R²: 0.9817
+  Test R²:  0.9850
+  Test MAE: 0.007429
 
 2. EVALUATING PERFORMANCE
 --------------------------------------------------
@@ -32,41 +32,41 @@ Evaluating κ-adaptive predictor performance...
 3. PERFORMANCE SUMMARY
 ==================================================
 Overall Performance:
-  R² = 0.9837
-  MAE = 0.012609
+  R² = 0.9908
+  MAE = 0.010522
 
 By Method:
-  svd_weighted   : R² = 0.9685, MAE = 0.021330, n = 176
-  kappa_corrected: R² = 0.9911, MAE = 0.007560, n = 304
+  svd_weighted   : R² = 0.9832, MAE = 0.016351, n = 162
+  kappa_corrected: R² = 0.9916, MAE = 0.007553, n = 318
 
 By Dimension:
-  SU(2): R² = 1.0000, MAE = 0.000042, κ̄ = 0.463
-  SU(3): R² = 0.9610, MAE = 0.023674, κ̄ = 0.751
-  SU(4): R² = 0.9527, MAE = 0.018508, κ̄ = 0.868
-  SU(6): R² = 0.9644, MAE = 0.012417, κ̄ = 0.923
-  SU(8): R² = 0.9898, MAE = 0.006882, κ̄ = 0.961
-  SU(10): R² = 0.9235, MAE = 0.014133, κ̄ = 0.972
+  SU(2): R² = 1.0000, MAE = 0.000598, κ̄ = 0.492
+  SU(3): R² = 0.9754, MAE = 0.018897, κ̄ = 0.736
+  SU(4): R² = 0.9694, MAE = 0.015812, κ̄ = 0.861
+  SU(6): R² = 0.9567, MAE = 0.009850, κ̄ = 0.939
+  SU(8): R² = 0.9730, MAE = 0.008326, κ̄ = 0.965
+  SU(10): R² = 0.9816, MAE = 0.009650, κ̄ = 0.967
 
 By Complexity:
-  low : R² = 0.9685, MAE = 0.021330, n = 176
-  high: R² = 0.9911, MAE = 0.007560, n = 304
+  low : R² = 0.9832, MAE = 0.016351, n = 162
+  high: R² = 0.9916, MAE = 0.007553, n = 318
 
 4. ASSESSMENT
 ==================================================
 🏆 ACHIEVED!
-   κ-adaptive predictor: R² = 0.9837
+   κ-adaptive predictor: R² = 0.9908
    SU(N) certainty transformations SOLVED!
 
 Top Correction Features:
-  combined_weight          : -0.0578
-  weight_deficit           : +0.0578
-  dim_deficit              : -0.0333
-  dim_2d_content           : +0.0333
-  fidelity_preservation_P  : +0.0220
+  weight_deficit           : +0.0624
+  combined_weight          : -0.0624
+  dim_deficit              : -0.0391
+  dim_2d_content           : +0.0391
+  fidelity_preservation_P  : +0.0172
 
 κ-Adaptive Strategy Validation:
-  Low complexity (κ ≤ 0.85): R² = 0.9685
-  High complexity (κ > 0.85): R² = 0.9911
+  Low complexity (κ ≤ 0.85): R² = 0.9832
+  High complexity (κ > 0.85): R² = 0.9916
 
 ================================================================================
 CCT PREDICTOR READY
