@@ -1,0 +1,100 @@
+cct_su2_transformation_demo RESULTS
+======================================================================
+ CCT SU(2) CERTAINTY TRANSFORMATION LAW DEMONSTRATION (DIHEDRAL ANGLE)
+======================================================================
+
+--- Case 1: Simple phase shift on |1> component ---
+Initial State A: [0.707 0.707]
+Transformed State B: [0.707 (0.500+0.500j)]
+Initial Certainty P_A = |<O_eig|A>|^2 = 0.5000
+Fidelity F_AB = |<A|B>|^2 = 0.8536
+Calculated dihedral gamma_relative = -1.5708 rad = -90.00 deg
+CCT Predicted Certainty T_CCT = 0.5000
+Direct QM Certainty T_QM = |<O_eig|B>|^2 = 0.5000
+Difference |T_CCT - T_QM| = 0.000000
+SUCCESS: CCT prediction matches QM calculation.
+---------------------------------------------------
+
+--- Case 2: A=|0>, B=Ry(60 deg)A ---
+Initial State A: [1.000 0.000]
+Transformed State B: [0.866 0.500]
+Initial Certainty P_A = |<O_eig|A>|^2 = 1.0000
+Fidelity F_AB = |<A|B>|^2 = 0.7500
+Calculated dihedral gamma_relative = 0.0000 rad = 0.00 deg
+CCT Predicted Certainty T_CCT = 0.7500
+Direct QM Certainty T_QM = |<O_eig|B>|^2 = 0.7500
+Difference |T_CCT - T_QM| = 0.000000
+SUCCESS: CCT prediction matches QM calculation.
+------------------------------------
+
+--- Case 3: General U, Observable |+><+| ---
+Initial State A: [0.894 (0.000+0.447j)]
+Transformed State B: [(0.808-0.055j) (0.577-0.105j)]
+Initial Certainty P_A = |<O_eig|A>|^2 = 0.5000
+Fidelity F_AB = |<A|B>|^2 = 0.5508
+Calculated dihedral gamma_relative = -0.3204 rad = -18.36 deg
+CCT Predicted Certainty T_CCT = 0.9721
+Direct QM Certainty T_QM = |<O_eig|B>|^2 = 0.9721
+Difference |T_CCT - T_QM| = 0.000000
+SUCCESS: CCT prediction matches QM calculation.
+--------------------------------------------
+
+--- Case 4: B = global_phase * A (F_AB=1) ---
+Initial State A: [0.816 (0.408+0.408j)]
+Transformed State B: [(0.736+0.354j) (0.191+0.545j)]
+Initial Certainty P_A = |<O_eig|A>|^2 = 0.6667
+Fidelity F_AB = |<A|B>|^2 = 1.0000
+Calculated dihedral gamma_relative = 0.0000 rad = 0.00 deg
+CCT Predicted Certainty T_CCT = 0.6667
+Direct QM Certainty T_QM = |<O_eig|B>|^2 = 0.6667
+Difference |T_CCT - T_QM| = 0.000000
+SUCCESS: CCT prediction matches QM calculation.
+---------------------------------------------
+
+--- Case 5: B orthogonal to A (F_AB=0) ---
+Initial State A: [1.000 0.000]
+Transformed State B: [0.000 1.000]
+Initial Certainty P_A = |<O_eig|A>|^2 = 1.0000
+Fidelity F_AB = |<A|B>|^2 = 0.0000
+Calculated dihedral gamma_relative = 0.0000 rad = 0.00 deg
+CCT Predicted Certainty T_CCT = 0.0000
+Direct QM Certainty T_QM = |<O_eig|B>|^2 = 0.0000
+Difference |T_CCT - T_QM| = 0.000000
+SUCCESS: CCT prediction matches QM calculation.
+------------------------------------------
+
+--- Case 6: P_A = 1 (A is eigenstate of O) ---
+Initial State A: [1.000 0.000]
+Transformed State B: [0.966 0.259]
+Initial Certainty P_A = |<O_eig|A>|^2 = 1.0000
+Fidelity F_AB = |<A|B>|^2 = 0.9330
+Calculated dihedral gamma_relative = 0.0000 rad = 0.00 deg
+CCT Predicted Certainty T_CCT = 0.9330
+Direct QM Certainty T_QM = |<O_eig|B>|^2 = 0.9330
+Difference |T_CCT - T_QM| = 0.000000
+SUCCESS: CCT prediction matches QM calculation.
+----------------------------------------------
+
+--- Case 7: P_A = 0 (A is other eigenstate of O) ---
+Initial State A: [0.000 1.000]
+Transformed State B: [-0.309 0.951]
+Initial Certainty P_A = |<O_eig|A>|^2 = 0.0000
+Fidelity F_AB = |<A|B>|^2 = 0.9045
+Calculated dihedral gamma_relative = 0.0000 rad = 0.00 deg
+CCT Predicted Certainty T_CCT = 0.0955
+Direct QM Certainty T_QM = |<O_eig|B>|^2 = 0.0955
+Difference |T_CCT - T_QM| = 0.000000
+SUCCESS: CCT prediction matches QM calculation.
+----------------------------------------------------
+
+--- Case 8: General A, general U ---
+Initial State A: [0.600 (0.647+0.470j)]
+Transformed State B: [(-0.073+0.522j) (0.843-0.109j)]
+Initial Certainty P_A = |<O_eig|A>|^2 = 0.3600
+Fidelity F_AB = |<A|B>|^2 = 0.2264
+Calculated dihedral gamma_relative = 2.4078 rad = 137.95 deg
+CCT Predicted Certainty T_CCT = 0.2782
+Direct QM Certainty T_QM = |<O_eig|B>|^2 = 0.2782
+Difference |T_CCT - T_QM| = 0.000000
+SUCCESS: CCT prediction matches QM calculation.
+------------------------------------
