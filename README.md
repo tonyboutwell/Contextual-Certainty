@@ -168,7 +168,7 @@ Therefore, `chi_AB = O(ε²)`.
 
 **A.2 Scaling of Bargmann Invariant `gamma_ABO_bargmann`**
 
-The Bargmann invariant `gamma_ABO_bargmann = arg(<A|B><B|O_eig><O_eig|A>)` is related to the Fubini-Study area (`Area_FS`) of the geodesic triangle {A, B, O_eig}. For a small triangle on a manifold of constant curvature `K`, the holonomy (geometric phase) is `γ = K_FS * Area_FS` [Ref_BargmannArea].
+The Bargmann invariant `gamma_ABO_bargmann = arg(<A|B><B|O_eig><O_eig|A>)` is related to the Fubini-Study area (`Area_FS`) of the geodesic triangle {A, B, O_eig}. For a small triangle on a manifold of constant curvature `K`, the holonomy (geometric phase) is `γ = K_FS * Area_FS`.
 Since `Area_FS` of a small geodesic triangle with sides of order `ε` scales as `O(ε²)`, we have:
 `gamma_ABO_bargmann = O(ε²)`.
 
@@ -176,7 +176,7 @@ Since `Area_FS` of a small geodesic triangle with sides of order `ε` scales as 
 
 The squared contextual misalignment `kappa_ABO^2 = det G`, where `G_ij = F_ij = |<ψ_i|ψ_j>|^2`.
 For a small geodesic triangle {A, B, O_eig} with edge lengths `ε_AB, ε_BO, ε_OA ~ O(ε)`, the fidelities are `F_ij ≈ 1 - ε_ij²/k` (where `k=1` if `ε_ij` is FS-dist or `k=4` if using `ε_ij/2` from AI's fidelity expansion convention based on `|<ψ_i|ψ_j>|`).
-A detailed expansion of `det G` [Ref_DetGExpansion_or_AI_derivation_Eq3] shows:
+A detailed expansion of `det G` shows:
 `det G = (K_FS²/4) * (Area_FS)² + O(ε^6)`
 where `Area_FS = (1/2)ε_AB ε_AO sin(φ_A) + O(ε^3)` is the Fubini-Study area of the triangle, and `φ_A` is the angle at vertex A.
 Since `Area_FS = O(ε²)`, it follows that `det G = O(ε^4)`.
@@ -335,7 +335,7 @@ In this gauge, the area-related parameters `α = Im(<O_eig|A><u|O_eig>)` and `β
 
 **D.3 Expansion of `z` Invariants**
 
-Under the conditions above (all states `ε`-close and in Pancharatnam gauge), detailed Taylor expansions of `kappa_XYO` and `gamma_XYO_bargmann` for the three relevant triads yield [Ref_DetailedExpansion_or_AI_Response]:
+Under the conditions above (all states `ε`-close and in Pancharatnam gauge), detailed Taylor expansions of `kappa_XYO` and `gamma_XYO_bargmann` for the three relevant triads yield:
 
 *   `z_ABO ≈ κ_ABO + i*γ_ABO_bargmann ≈ c_1 ε² + i*c'_1 ε² + O(ε³)`
 *   `z_BCO ≈ κ_BCO + i*γ_BCO_bargmann ≈ c_2 ε² + i*c'_2 ε² + O(ε³)`
