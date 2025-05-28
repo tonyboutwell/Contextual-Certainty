@@ -11,7 +11,7 @@ This folder provides the validation for the exact Contextual Certainty Transform
     *   `P_A` is the initial certainty `|<O_eig|A>|^2`.
     *   `F_AB` is the fidelity `|<A|B>|^2`.
     *   `gamma_relative_dihedral` is the **oriented (signed) dihedral angle** calculated from the Bloch vectors of A, B, and O_eig.
-*   `[cct_su2_transformation_demo_RESULTS.txt]`
+*   `cct_su2_transformation_demo_RESULTS.txt`
 
 ## Purpose:
 This exact SU(2) law is a foundational component of the CCT framework. It serves as the baseline for the highly accurate SU(N) `KappaAdaptiveCCTPredictor`, which applies this law to optimally projected effective 2D states.
